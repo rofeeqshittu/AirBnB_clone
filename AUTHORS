@@ -1,0 +1,36 @@
+# AUTHORS
+
+This file lists all individuals who have contributed content to the AirBnB clone repository. Contributions include code, documentation, and other resources. Following the format used by Docker’s AUTHORS page, contributors are listed below:
+
+## Maintainers
+
+- **Rofeeq Shittu** (rofeeqshittu) <rofeeqshittu21@gmail.com>
+
+## Contributors
+
+- **Contributor One** (contributor1github) <contributor1@example.com>
+- **Contributor Two** (contributor2github) <contributor2@example.com>
+- **Contributor Three** (contributor3github) <contributor3@example.com>
+
+## Guidelines
+
+To contribute to this repository:
+
+1. **Fork the repository** to your GitHub account.
+2. **Create a new branch** for your changes:
+   ```bash
+   git checkout -b your-branch-name
+   ```
+3. **Make your changes** and commit them with clear and descriptive messages.
+4. **Push your changes** to your forked repository:
+   ```bash
+   git push origin your-branch-name
+   ```
+5. **Create a pull request** from your branch to the main repository.
+
+We encourage the use of branches and pull requests on GitHub to help the team organize work efficiently. Each pull request should be reviewed and approved by at least one other contributor before being merged into the main branch.
+
+Thank you for your contributions!
+
+---
+
