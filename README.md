@@ -12,7 +12,7 @@ The command interpreter acts as a simple, interactive shell that allows you to m
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/AirBnB_clone.git
+   git clone https://github.com/rofeeqshittu/AirBnB_clone.git
    cd AirBnB_clone
    ```
 
