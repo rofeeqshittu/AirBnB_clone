@@ -1,0 +1,323 @@
+/* General Styles */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Places Section */
+.places {
+    margin-top: 30px;
+    max-width: 1000px;
+    margin: 30px auto; /* Center horizontally */
+    
+}
+
+.places h1 {
+    font-size: 30px;
+    margin: 0 0 20px 0; /* Add bottom margin */
+    text-align: left;
+}
+
+/* Flexbox container for places */
+.uppa {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line */
+    gap: 20px; /* Gap between articles */
+    justify-content: space-between; /* Distributes items evenly */
+}
+
+/* Place Articles */
+.places article {
+    width: 100%; /* Full width for small screens */
+    max-width: 300px; /* Limit the max width */
+    margin: 0 auto; /* Center horizontally in small screens */
+    padding: 20px;
+    border: 1px solid #FF5A5F;
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive: Two columns for medium screens */
+@media(min-width: 768px) {
+    .places article {
+        width: calc(50% - 20px); /* Two columns with gap */
+    }
+}
+
+/* Responsive: Three columns for large screens */
+@media(min-width: 1024px) {
+    .places article {
+        width: calc(33.33% - 20px); /* Three columns with gap */
+    }
+}
+
+/* Place Title */
+.places article h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Price by night */
+.price_by_night {
+    color: #FF5A5F;
+    border: 4px solid #FF5A5F;
+    border-radius: 50%;
+    min-width: 60px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px; /* Vertically centers text */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Information section */
+/* Information section */
+.information {
+    height: auto; /* Allow the container to adjust its height automatically */
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    flex-wrap: wrap; /* Ensures content wraps to the next line if necessary */
+}
+
+/* Individual information items */
+.information div {
+    width: auto; /* Allow the div to take as much space as needed */
+    flex: 1; /* Flex-grow to ensure even distribution */
+    min-width: 100px; /* Ensure a minimum width so that it doesn't shrink too much */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+/* Icon styling */
+.information div::before {
+    content: ''; /* Empty content for the pseudo-element */
+    display: block;
+    width: 24px; /* Set the size of the icon */
+    height: 24px;
+    background-size: cover; /* Ensure the background image covers the entire area */
+    background-repeat: no-repeat; /* Prevent repeating the background image */
+    margin: 0; /* Add space between the icon and the text */
+}
+
+/* Icons for max guest, rooms, and bathrooms */
+.max_guest::before {
+    background-image: url('../images/icon_group.png');
+}
+
+.number_rooms::before {
+    background-image: url('../images/icon_bed.png'); 
+}
+
+.number_bathrooms::before {
+    background-image: url('../images/icon_bath.png');
+}
+
+/* Text styling */
+.information div span {
+    font-size: 14px;
+    text-align: center;
+    word-wrap: break-word; /* Allows breaking long words or numbers */
+    overflow-wrap: break-word;
+}
+
+/* User section */
+.user {
+    margin: 10px 0;
+}
+
+.user strong {
+    font-weight: bold;
+}
+
+/* Description section */
+.description {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Filters Section */
+.filters {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.filter {
+    height: 100%;
+    width: 25%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.locations {
+    border-right: 1px solid #DDDDDD;
+}
+
+/* Filter Titles */
+.filters h3 {
+    font-weight: 600;
+    margin: 0;
+}
+
+.filters h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 5px 0 0;
+}
+
+/* Filter Button */
+.filters button {
+    font-size: 18px;
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.filters button:hover {
+    opacity: 90%;
+}
+
+/* Dropdown (Popover) */
+.popover {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    list-style: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Show dropdown on hover */
+.filter:hover .popover {
+    display: block;
+}
+
+.popover li {
+    margin-bottom: 10px;
+}
+
+/* State and City styling in dropdown */
+.popover .state {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.popover .cities {
+    padding-left: 15px;
+}
+
+
+/* Amenities Section */
+.amenitiesBody {
+    margin-top: 40px;
+}
+
+.amenitiesBody h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 10px; /* Space below the title */
+}
+
+.amenitiesBody ul {
+    list-style: none;
+    padding: 0; /* Remove default padding */
+}
+
+.amenitiesBody li {
+    display: flex; /* Align icon and text side by side */
+    align-items: center;
+    margin-top: 10px; /* Add space between each amenity */
+}
+
+/* Icon next to the amenities text */
+.amenity .icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Add specific icons for each amenity */
+.pet-friendly {
+    background-image: url('../images/icon_pets.png');
+}
+
+
+
+.tv {
+    background-image: url('../images/icon_tv.png');
+}
+
+.wifi {
+    background-image: url('../images/icon_wifi.png');
+}
+
+.parking {
+    background-image: url('../images/icon_parking.png');
+}
+
+.kitchen {
+    background-image: url('../images/icon_kitchen.png');
+}
+
+/* Reviews Section */
+.reviews {
+    margin-top: 40px;
+}
+
+.reviews h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 10px; /* Space below the title */
+}
+
+.reviews ul {
+    list-style: none;
+    padding: 0; /* Remove default padding */
+}
+
+.reviews li {
+    margin-top: 10px; /* Space between each review */
+}
+
+.reviews h3 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.reviews p {
+    font-size: 12px;
+    margin: 5px 0 0 0; /* Small margin for spacing after h3 */
+}
