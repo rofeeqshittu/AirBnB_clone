@@ -1,0 +1,110 @@
+/* Filter Section */
+.filters {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    position: relative; /* Needed for the button positioning */
+    display: flex; /* Flex to align children (filters and button) side by side */
+    align-items: center; /* Vertically align content */
+    /* justify-content: space-between; */
+}
+
+/* Locations and Amenities filters */
+.filters .filter {
+    height: 100%; /* Full height of the section */
+    width: 25%; /* 25% of the section's width */
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content inside the filter */
+    position: relative; /* Needed for the positioning of the popover */
+}
+
+.filters .locations {
+    border-right: 1px solid #DDDDDD; /* Right border for the first filter */
+}
+
+/* Title and Subtitle */
+.filters h3 {
+    font-weight: 600;
+    margin: 0;
+}
+.filters h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 5px 0 0 0; /* Small margin for spacing */
+}
+
+.filters button {
+    font-size: 18px;
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    right: 30px; /* 30px from the right border of the filters section */
+    top: 50%; /* Moves button halfway down */
+    transform: translateY(-50%); /* Centers the button vertically */
+    cursor: pointer;    
+}
+.filters button:hover {
+    opacity: 90%;
+    margin-bottom: 50px;
+}
+
+
+/* Dropdown (Popover) */
+.popover {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position dropdown below the filter */
+    left: 0;
+    width: 100%; /* Same width as the filter div */
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    list-style: none;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0; /* Remove any default margin */
+}
+
+/* Show dropdown on hover */
+.filter:hover .popover {
+    display: block;
+}
+
+/* List items */
+.popover li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+/* Locations filter with nested levels */
+.popover .state {
+    font-size: 16px; /* State name font size */
+    font-weight: bold;
+}
+
+.popover .cities {
+    padding-left: 15px; /* Indent cities under state */
+}
+
+.popover ul {
+    margin: 0;
+    padding: 0;
+}
+
+.popover li ul {
+    margin-top: 5px;
+}
+
+
+/* Ensure that popover aligns properly within the filter width */
+.filter:hover .popover {
+    width: calc(100% - 2px); /* Adjust to align with the filter's width and border */
+}
