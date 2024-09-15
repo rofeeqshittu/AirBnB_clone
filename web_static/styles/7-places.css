@@ -1,0 +1,30 @@
+.places {
+    margin-top: 30px; /* 30px space below the filters section */
+    max-width: 1000px; /* Same max-width as the container */
+    margin: 30px auto; /* Center horizontally and 30px top/bottom margin */
+    display: flex;
+}
+
+.places h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Align title to the top left */
+}
+
+
+/* Place articles */
+.places article {
+    width: 390px;
+    /* padding: 20px; */
+    margin: 20px;
+    border: 1px solid #FF5A5F;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Place names */
+.places article h2 {
+    font-size: 30px;
+    text-align: center; /* Center the place name horizontally */
+}
